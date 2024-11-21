@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>Полином Лагранжа и Ньютона</h1>
+    <h2>Написал Вахмянини Никита Дмитриевич</h2>
     <form @submit.prevent="addPoint">
       <div>
         <label for="x">X:</label>
@@ -17,7 +18,7 @@
     <ul>
       <li v-for="(point, index) in points" :key="index">
         ({{ point.x }}, {{ point.y }})
-        <button @click="removePoint(index)">Удалить</button>
+        <button style="background-color: red" @click="removePoint(index)">Удалить</button>
       </li>
     </ul>
 
@@ -121,7 +122,11 @@ export default {
 </script>
 
 <style>
+p,h1,h2,label,li{
+  color: white;
+}
 body {
+  background-image: url("public/backgroumd.png");
   font-family: Arial, sans-serif;
   margin: 20px;
 }
@@ -129,6 +134,21 @@ form {
   margin-bottom: 20px;
 }
 button {
-  margin-left: 10px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #009c26;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+input{
+  border: none;
+  margin-left: 3px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+
+  margin-top: 10px;
 }
 </style>
