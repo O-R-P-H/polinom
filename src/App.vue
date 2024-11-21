@@ -126,7 +126,7 @@ p,h1,h2,label,li{
   color: white;
 }
 body {
-  background-image: url("public/backgroumd.png");
+  background-image: url("../public/backgroumd.png");
   font-family: Arial, sans-serif;
   margin: 20px;
 }
